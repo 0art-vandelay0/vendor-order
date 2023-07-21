@@ -26,8 +26,10 @@ namespace Pierres.Tests.ModelTests
             string name = "Test Vendor";
             string description = "Test Description";
             Vendor newVendor = new Vendor(name, description);
-            string result = newVendor.Name;
-            Assert.AreEqual(name, result);
+            string nameResult = newVendor.Name;
+            string descResult = newVendor.Description;
+            Assert.AreEqual(name, nameResult);
+            Assert.AreEqual(description, descResult);
         }
 
         [TestMethod]
