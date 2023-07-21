@@ -3,7 +3,7 @@
 }
     @using Pierres.Models;
 
-    <h3>Here are all the orders for this Vendor:</h3>
+    <h3>Here are all the orders for @Model["vendor"].Name:</h3>
 
     <ol>
         @foreach (Order order in @Model["orders"])
