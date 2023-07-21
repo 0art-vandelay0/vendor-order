@@ -21,7 +21,7 @@ namespace Pierres.Tests.ModelTests
         }
 
         [TestMethod]
-        public void GetName_ReturnsName_String()
+        public void VendorConstructor_ReturnsProperties_String()
         {
             string name = "Test Vendor";
             string description = "Test Description";
