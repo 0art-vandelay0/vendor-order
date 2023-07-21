@@ -19,5 +19,15 @@ namespace Pierres.Tests.ModelTests
             Vendor newVendor = new Vendor("test vendor", "test description");
             Assert.AreEqual(typeof(Vendor), newVendor.GetType());
         }
+
+        [TestMethod]
+        public void GetName_ReturnsName_String()
+        {
+            string name = "Test Vendor";
+            string description = "Test Description";
+            Vendor newVendor = new Vendor(name, description);
+            string result = newVendor.Name;
+            Assert.AreEqual(name, result);
+        }
     }
 }
