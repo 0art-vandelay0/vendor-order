@@ -10,8 +10,9 @@ body {
 h1{
     margin-bottom: 50px;
     /* border: 1px solid lightgray; */
-    background-color: black;
-    padding: 20px 10px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 30px 10px;
     box-shadow: 1px 1px 1px rgb(98, 104, 104);
 }
 
