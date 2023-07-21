@@ -70,5 +70,24 @@ namespace Pierres.Tests.ModelTests
             Vendor result = Vendor.Find(2);
             Assert.AreEqual(newVendor2, result);
         }
+
+        [TestMethod]
+        public void AddOrder_AddsOrderObjectToVendor_OrderList()
+        {
+            string title = "Test Title";
+            string description = "Test description";
+            int price = 150;
+            string date = "07-21-2023";
+            Order newOrder = new Order(title, description, price, date);
+            List<Order> newOrderList = new List<Order> { newOrder };
+            string vendorName = "Suzie's Cafe";
+            string vendorDescription = "Weekly";
+            Vendor newVendor = new Vendor(vendorName, vendorDescription);
+            newVendor.AddOrder(newOrder);
+
+            List<Order> resultList = newVendor.Orders;
+
+            CollectionAssert.AreEqual(newOrderList, resultList);
+        }
     }
 }
