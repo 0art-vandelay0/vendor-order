@@ -93,5 +93,13 @@ namespace Pierres.Tests.ModelTests
             string result = newOrder.Date;
             Assert.AreEqual(newDate, result);
         }
+
+        [TestMethod]
+        public void GetAll_ReturnsEmptyOrderList_OrderList()
+        {
+            List<Order> newList = new List<Order> { };
+            List<Order> resultList = Order.GetAll();
+            CollectionAssert.AreEqual(newList, resultList);
+        }
     }
 }
