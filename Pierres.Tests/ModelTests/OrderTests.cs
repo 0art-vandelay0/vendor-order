@@ -79,5 +79,19 @@ namespace Pierres.Tests.ModelTests
             int result = newOrder.Price;
             Assert.AreEqual(newPrice, result);
         }
+
+        [TestMethod]
+        public void SetDate_SetsDate_String()
+        {
+            string title = "Test Title";
+            string description = "Test description";
+            int price = 150;
+            string date = "07-21-2023";
+            Order newOrder = new Order(title, description, price, date);
+            string newDate = "07-30-2023";
+            newOrder.Date = newDate;
+            string result = newOrder.Date;
+            Assert.AreEqual(newDate, result);
+        }
     }
 }
