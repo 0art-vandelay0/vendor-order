@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
 using Pierres.Models;
 
@@ -7,18 +6,22 @@ namespace Pierres.Controllers
 {
     public class OrdersController : Controller
     {
-        [HttpGet("/orders")]
-        public ActionResult Index()
+        [HttpGet("/vendors/{vendorId}/orders/new")]
+        public ActionResult New(int vendorId)
         {
-            List<Order> allOrders = Order.GetAll();
-            return View(allOrders);
+            Vendor vendor = Vendor.Find(vendorId);
+            return View(vendor);
         }
 
-        [HttpGet("/vendors/{vendorId}/orders/new")]
-        public ActionResult New(int VenderId)
+        [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+        public ActionResult Show(int vendorId, int orderId)
         {
-            Vendor vender = Vendor.Find(VenderId);
-            return View(vender);
+            Order order = Order.Find(orderId);
+            Vendor vendor = Vendor.Find(vendorId);
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("order", order);
+            model.Add("vendor", vendor);
+            return View(model);
         }
     }
 }

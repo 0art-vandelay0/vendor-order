@@ -37,12 +37,13 @@ namespace Pierres.Controllers
             return View(model);
         }
 
+        // Creates a new Order within the selected Vendor
         [HttpPost("/vendors/{vendorId}/orders")]
-        public ActionResult Create(int vendorID, string title, string orderDescription, int price, string date)
+        public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice, string orderDate)
         {
             Dictionary<string, object> model = new Dictionary<string, object>();
-            Vendor foundVendor = Vendor.Find(vendorID);
-            Order newOrder = new Order(title, orderDescription, price, date);
+            Vendor foundVendor = Vendor.Find(vendorId);
+            Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
             foundVendor.AddOrder(newOrder);
             List<Order> vendorOrders = foundVendor.Orders;
             model.Add("orders", vendorOrders);
