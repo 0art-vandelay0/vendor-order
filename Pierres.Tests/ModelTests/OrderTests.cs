@@ -21,7 +21,7 @@ namespace Pierres.Tests.ModelTests
         }
 
         [TestMethod]
-        public void OrderConstructor_ReturnsOrderProperies_Order()
+        public void GetProperties_ReturnsOrderProperies_Order()
         {
             string title = "Test Title";
             string description = "Test description";
@@ -36,7 +36,20 @@ namespace Pierres.Tests.ModelTests
             Assert.AreEqual(description, descrptResult);
             Assert.AreEqual(price, priceResult);
             Assert.AreEqual(date, dateResult);
+        }
 
+        [TestMethod]
+        public void SetTitle_SetsTitle_String()
+        {
+            string title = "Test Title";
+            string description = "Test description";
+            int price = 150;
+            string date = "07-21-2023";
+            Order newOrder = new Order(title, description, price, date);
+            string newTitle = "Updated Title";
+            newOrder.Title = newTitle;
+            string result = newOrder.Title;
+            Assert.AreEqual(newTitle, result);
         }
     }
 }
