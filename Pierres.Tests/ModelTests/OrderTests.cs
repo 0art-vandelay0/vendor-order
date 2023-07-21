@@ -51,5 +51,19 @@ namespace Pierres.Tests.ModelTests
             string result = newOrder.Title;
             Assert.AreEqual(newTitle, result);
         }
+
+        [TestMethod]
+        public void SetDescrption_SetsDescription_String()
+        {
+            string title = "Test Title";
+            string description = "Test description";
+            int price = 150;
+            string date = "07-21-2023";
+            Order newOrder = new Order(title, description, price, date);
+            string newDescription = "Updated Description";
+            newOrder.Description = newDescription;
+            string result = newOrder.Description;
+            Assert.AreEqual(newDescription, result);
+        }
     }
 }
