@@ -29,5 +29,15 @@ namespace Pierres.Tests.ModelTests
             string result = newVendor.Name;
             Assert.AreEqual(name, result);
         }
+
+        [TestMethod]
+        public void GetId_ReturnsVendorId_Int()
+        {
+            string name = "Test Category";
+            string description = "Test Description";
+            Vendor newVendor = new Vendor(name, description);
+            int result = newVendor.Id;
+            Assert.AreEqual(1, result);
+        }
     }
 }
