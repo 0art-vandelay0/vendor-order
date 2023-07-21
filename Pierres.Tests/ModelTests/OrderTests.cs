@@ -123,5 +123,17 @@ namespace Pierres.Tests.ModelTests
             List<Order> resultList = Order.GetAll();
             CollectionAssert.AreEqual(newOrdersList, resultList);
         }
+
+        [TestMethod]
+        public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+        {
+            string title = "Test Title";
+            string description = "Test description";
+            int price = 150;
+            string date = "07-21-2023";
+            Order newOrder = new Order(title, description, price, date);
+            int result = newOrder.Id;
+            Assert.AreEqual(1, result);
+        }
     }
 }
