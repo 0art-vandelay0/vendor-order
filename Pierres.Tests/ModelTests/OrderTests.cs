@@ -101,5 +101,27 @@ namespace Pierres.Tests.ModelTests
             List<Order> resultList = Order.GetAll();
             CollectionAssert.AreEqual(newList, resultList);
         }
+
+        [TestMethod]
+        public void GetAll_ReturnsAllOrders_OrderList()
+        {
+            string title01 = "Test Title 1";
+            string description01 = "Test description 1";
+            int price01 = 150;
+            string date01 = "07-21-2023";
+
+            string title02 = "Test Title 2";
+            string description02 = "Test description 2";
+            int price02 = 100;
+            string date02 = "07-30-2023";
+
+            Order newOrder01 = new Order(title01, description01, price01, date01);
+            Order newOrder02 = new Order(title02, description02, price02, date02);
+
+            List<Order> newOrdersList = new List<Order> { newOrder01, newOrder02 };
+
+            List<Order> resultList = Order.GetAll();
+            CollectionAssert.AreEqual(newOrdersList, resultList);
+        }
     }
 }
