@@ -14,6 +14,20 @@ h1{
     background-color: whitesmoke;
     padding: 30px 10px;
     box-shadow: 1px 1px 1px rgb(98, 104, 104);
+    font-weight: bolder;
+}
+
+#splash-intro {
+    font-size: 30px;
+}
+
+.intruct-h3 {
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+.large-font {
+    font-size: 25px;
 }
 
 a {
@@ -57,4 +71,29 @@ button {
     color: black;
     box-shadow: 5px 5px 5px black;
     border: 2px black;
+}
+
+#links {
+    background-color: darkslategray;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.centered-ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-position: inside;
+}
+
+.centered-ol li {
+    margin-bottom: 10px;
+    margin-right: 40px;
 }

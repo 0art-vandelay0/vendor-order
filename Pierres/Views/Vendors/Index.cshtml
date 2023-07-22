@@ -4,8 +4,9 @@
 
 @using Pierres.Models;
 
-    <h1>Categories</h1>
+    <h1>Vendors</h1>
 
+    <h3 class="intruct-h3">Click Vendor to view associated Orders</h3>
     @if (@Model.Count == 0)
     {
     <h3>No Vendors have been added yet!</h3>
@@ -17,4 +18,8 @@
     <p>@vendor.Description</p>
     }
 
-    <p><a href='/'>Back home</a></p>
+    <div id="links">
+        <a href='/vendors/new'>Add Vendor</a>
+        <br>
+        <a href='/'>Back home</a>
+    </div>
