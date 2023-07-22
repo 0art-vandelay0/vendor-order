@@ -2,7 +2,7 @@
 
 #### **By Casey Hill**
 
-#### A simple web application that allows you to add Vendors to a vendor page and add orders assocatied with the Vendors. &#x2615; &#x1F35E; &#x1F365;
+#### A simple web application that allows you to add Vendors to a vendor page and add orders assocatied with the Vendors. &#x1F4C1; &#x1F4C5; &#x1F4CB;
 
 #### ...._"Organize your thoughts, focus on the essentials, and simplify everything."_ - Haruki Murakami
 
@@ -39,7 +39,7 @@ This is a web app that allows a buiness owner to organize orders and vendors and
         -   cd to Pierre.Tests.
         -   enter `dotnet build` into your terminal.
         -   enter `dotnet test` into your terminal.
-    -   cd back to Bakery dir and enter `dotnet watch run`.
+    -   cd back to Pierres dir and enter `dotnet watch run`.
     -   The program should start and you will see the splash page open at localhost port 5000 or 5001.
     -   Add a new Vendor and go from there.
 
@@ -51,7 +51,7 @@ If the program does not run, try the following:
 
 -   Check that you have the appropriate .NET packages installed to run dotnet
 -   Make sure the port needed to run is not currently already in use.
--   Try creating a `global.json` file in the Bakery.Tests dir that contains the following code to override the default version:<br>
+-   Try creating a `global.json` file in the Pierres.Tests dir that contains the following code to override the default version:<br>
     {<br>
     &emsp;&emsp; "sdk": {<br>
     &emsp;&emsp;&emsp;&emsp;"version": "6.0.402"<br>
